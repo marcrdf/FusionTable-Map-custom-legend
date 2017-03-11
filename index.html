@@ -17,7 +17,7 @@
     <meta charset="UTF-8">
     
     <!--MODIFY your web page title -->
-    <title>Fusion Tables Layer Example: Legend</title>
+    <title>Reference Sites Fusion 2017-03-10 - Google Fusion Tables</title>
 
     <script type="text/javascript"
         src="http://maps.google.com/maps/api/js?sensor=false"></script>
@@ -65,8 +65,8 @@
       function initialize() {
         // MODIFY the map center point, zoom level, and type if desired
         var map = new google.maps.Map(document.getElementById('map-canvas'), {
-          center: new google.maps.LatLng(37.4, -90.1),
-          zoom: 4,
+          center: new google.maps.LatLng(54.569673383565146, -3.01300048828125),
+          zoom: 6,
           mapTypeId: google.maps.MapTypeId.ROADMAP
         });
         // MODIFY these items in the section below: 
@@ -76,12 +76,12 @@
         var layer = new google.maps.FusionTablesLayer({
           map: map,
           query: {
-            select: 'Address',
-            from: '1RXgs33--EUO1ARJsNr0VQwju9TyebQpkuBlbxmlF',
+            select: 'Long',
+            from: '1SMAV5hGP_jdWIuZMMkDz9I1r9QIfutzu5kelDFuc',
           },
           options:{
-            styleId: 5,
-            templateId: 6
+            styleId: 2,
+            templateId: 2
           }
         });
         // MODIFY Title and text of your legend. Match color names and labels to the Google Fusion Table map marker icons you already created.
@@ -90,10 +90,9 @@
         legend.id = 'legend';
         var content = [];
         content.push('<h3>Company</h3>');
-        content.push('<p><div class="color green"></div>The Fresh Market</p>');
-        content.push('<p><div class="color blue"></div>Whole Foods Market</p>');
-        content.push('<p><div class="color yellow"></div>Sprouts Farmers Market</p>');
-        content.push('<p>*Only US locations</p>');
+        content.push('<p><div class="small_red"></div>Tideflex</p>');
+        content.push('<p><div class="small_yellow"></div>CheckMate</p>');
+        content.push('<p><div class="grn_stars"></div>Case Study</p>');
         content.push('<p><a href="https://www.google.com/fusiontables/DataSource?docid=1RXgs33--EUO1ARJsNr0VQwju9TyebQpkuBlbxmlF">Source Data</a>');
         legend.innerHTML = content.join('');
         legend.index = 1;
